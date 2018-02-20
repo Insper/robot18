@@ -55,18 +55,14 @@ Para instalar a OpenCV
 
 ## Caso tenha problemas
 
-###No Windows
+### No Windows ou no OSX
 
-**Alternativa 1**
+Faça:
 
-Se tiver problemas no Windows:
-
-Alternativa 1:
-
-    conda install -c menpo opencv=2.4.11
+    conda install -c conda-forge opencv
 
 
-**Alternativa 2:**
+**Alternativa para Windows:**
 
 
 Baixe a OpenCV do link [https://sourceforge.net/projects/opencvlibrary/files/opencv-win/2.4.11/](https://sourceforge.net/projects/opencvlibrary/files/opencv-win/2.4.11/) e a instale em C:\OpenCV
