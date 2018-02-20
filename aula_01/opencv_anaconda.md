@@ -29,11 +29,6 @@ Para ativar outro ambiente:
 **No Linux ou Mac**
     source activate <font colore=red>NOME_DO_AMBIENTE</font>
 
-Para importar um ambiente de outra pessoa:
-
-    conda env create -f ARQUIVO.yml
-
-Substitua ARQUIVO pelo nome do arquivo concreto
 
 Para criar um environment Python 2.7 faça:
 
