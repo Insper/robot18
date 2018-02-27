@@ -59,7 +59,7 @@ while(True):
     circles = None
     circles=cv2.HoughCircles(bordas,cv2.HOUGH_GRADIENT,2,40,param1=50,param2=100,minRadius=5,maxRadius=60)
 
-    if circles != None:
+    if circles is not None:
         circles = np.uint16(np.around(circles))
 
         for i in circles[0,:]:
