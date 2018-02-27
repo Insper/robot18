@@ -35,9 +35,9 @@ if __name__ == '__main__':
         print("The probabilistic hough transform returns the end points of the detected lines")
         a,b,c = lines.shape
         print("Valor de A",a, "valor de lines.shape", lines.shape)
-        for i in range(b):
+        for i in range(a):
             # Faz uma linha ligando o ponto inicial ao ponto final, com a cor vermelha (BGR)
-            cv2.line(cdst, (lines[0][i][0], lines[0][i][1]), (lines[0][i][2], lines[0][i][3]), (0, 0, 255), 3, cv2.LINE_AA)
+            cv2.line(cdst, (lines[i][0][0], lines[i][0][1]), (lines[i][0][2], lines[i][0][3]), (0, 0, 255), 3, cv2.LINE_AA)
 
     else:    # HoughLines
         # Esperemos nao cair neste caso
@@ -48,7 +48,7 @@ if __name__ == '__main__':
             theta = lines[i][0][1]
             a = math.cos(theta)
             b = math.sin(theta)
-            x0, y0 = a*rho, b*rhos
+            x0, y0 = a*rho, b*rho
             pt1 = ( int(x0+1000*(-b)), int(y0+1000*(a)) )
             pt2 = ( int(x0-1000*(-b)), int(y0-1000*(a)) )
             cv2.line(cdst, pt1, pt2, (0, 0, 255), 3, cv2.LINE_AA)
