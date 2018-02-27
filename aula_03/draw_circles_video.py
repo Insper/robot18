@@ -63,6 +63,7 @@ while(True):
         circles = np.uint16(np.around(circles))
 
         for i in circles[0,:]:
+            print(i)
             # draw the outer circle
             # cv2.circle(img, center, radius, color[, thickness[, lineType[, shift]]])
             cv2.circle(bordas_color,(i[0],i[1]),i[2],(0,255,0),2)
@@ -83,7 +84,7 @@ while(True):
     #More drawing functions @ http://docs.opencv.org/2.4/modules/core/doc/drawing_functions.html
 
     # Display the resulting frame
-    cv2.imshow('Detector de circulos',blur)
+    cv2.imshow('Detector de circulos',bordas_color)
     print("No circles were found")
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
