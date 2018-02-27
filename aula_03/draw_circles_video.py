@@ -38,7 +38,7 @@ while(True):
     # Capture frame-by-frame
     print("New frame")
     ret, frame = cap.read()
-    
+
     # Convert the frame to grayscale
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     # A gaussian blur to get rid of the noise in the image
@@ -46,7 +46,7 @@ while(True):
     #blur = gray
     # Detect the edges present in the image
     bordas = auto_canny(blur)
-    
+
 
     circles = []
 
@@ -61,7 +61,7 @@ while(True):
 
     if circles != None:
         circles = np.uint16(np.around(circles))
-       
+
         for i in circles[0,:]:
             # draw the outer circle
             # cv2.circle(img, center, radius, color[, thickness[, lineType[, shift]]])
@@ -86,7 +86,7 @@ while(True):
     cv2.imshow('Detector de circulos',blur)
     print("No circles were found")
     if cv2.waitKey(1) & 0xFF == ord('q'):
-        break    
+        break
 # When everything done, release the capture
 cap.release()
 cv2.destroyAllWindows()

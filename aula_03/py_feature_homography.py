@@ -95,7 +95,7 @@ img2 = cv2.imread('box_in_scene.png',0) # Imagem do cenario - puxe do video para
 print(img2)
 
 # Initiate SIFT detector
-sift = cv2.SIFT()
+sift = cv2.xfeatures2d.SIFT_create()
 
 # find the keypoints and descriptors with SIFT in each image
 kp1, des1 = sift.detectAndCompute(img1,None)
@@ -138,7 +138,7 @@ if len(good)>MIN_MATCH_COUNT:
     img2b = cv2.polylines(img2,[np.int32(dst)],True,255,3, cv2.LINE_AA)
 
 else:
-    print "Not enough matches are found - %d/%d" % (len(good),MIN_MATCH_COUNT)
+    print("Not enough matches are found - %d/%d" % (len(good),MIN_MATCH_COUNT))
     matchesMask = None
 
 draw_params = dict(matchColor = (0,255,0), # draw matches in green color
