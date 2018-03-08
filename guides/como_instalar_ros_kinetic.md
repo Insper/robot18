@@ -38,7 +38,7 @@ Edite seu arquivo `~/.bashrc` de modo que ele contenha a seguinte linha:
 Num terminal, faça o seguinte:
 
     cd ~/catkin_ws/src
-    git clone https://github.com/ros-teleop/teleop_twist_keyboard.git
+    git clone https://github.com/ros-teleop/teleop_twist_keyboard.git    
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
     git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
@@ -57,7 +57,12 @@ Depois, no mesmo terminal do comando *export*:
     roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
 Num outro terminal, faça:
-    rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+    roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
+Num terceiro terminal, faça:
+    export TURTLEBOT3_MODEL=waffle
+    roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
+
 
 
 Fonte original: [Curso de Robótica na Olin College](https://sites.google.com/site/comprobo17/how-to/setting-up-your-environment)
