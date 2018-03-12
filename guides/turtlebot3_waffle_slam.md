@@ -7,7 +7,7 @@ Cada comando precisa ser dado num terminal diferente.
 
 Primeiro precisamos definir qual Turtlebot usar na simulação. A versão *Waffle* é interessante porque já vem com a câmera (este comando deve ser repetido em todo terminal, ou adicionado ao final do ~/.bashrc).
 
-    export TURTLEBOT3_MODEL=waffle
+    export TURTLEBOT3_MODEL=waffle_pi
 
 Depois iniciamos o ambiente virtual de simulação:
 
