@@ -45,6 +45,7 @@ Num terminal, faça o seguinte:
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
     git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+    git clone https://github.com/ROBOTIS-GIT/turtlebot3_applications.git   
     git clone https://github.com/mirwox/robot17   
     cd ..
     catkin_make .
@@ -66,8 +67,8 @@ Num outro terminal, faça:
     roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
 Num terceiro terminal, faça:
-    export TURTLEBOT3_MODEL=waffle
-    roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
+    export TURTLEBOT3_MODEL=waffle_pi
+    roslaunch turtlebot3_gazebo_ros turtlebot3_gazebo_rviz.launch
 
 
 
