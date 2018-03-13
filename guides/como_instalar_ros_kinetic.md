@@ -46,8 +46,10 @@ Num terminal, faça o seguinte:
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
     git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
     git clone https://github.com/mirwox/robot17   
-    cd .. 
-    catkin_make .    
+    cd ..
+    catkin_make .
+    catkin_make
+
 
 
 Para ver se tudo funcionou, num terminal faça:
