@@ -56,7 +56,7 @@ Num terminal, faça o seguinte:
 
 Para ver se tudo funcionou, num terminal faça:
 
-    export TURTLEBOT3_MODEL=waffle
+    export TURTLEBOT3_MODEL=waffle_pi
 
 Nós vamos usar o Turtlebot Burger com upgrades. No simulador é mais conveniente usarmos o Turtlebot Waffle do que fazermos o upgrade por nossa própria conta
 
@@ -65,9 +65,11 @@ Depois, no mesmo terminal do comando *export*:
     roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
 Num outro terminal, faça:
+
     roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
 Num terceiro terminal, faça:
+
     export TURTLEBOT3_MODEL=waffle_pi
     roslaunch turtlebot3_gazebo_ros turtlebot3_gazebo_rviz.launch
 
