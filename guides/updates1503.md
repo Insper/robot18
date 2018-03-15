@@ -27,7 +27,10 @@ Num terminal:
     export TURTLEBOT3_MODEL=waffle_pi
     roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
+
 Em outro terminal:
+
+
 
    export TURTLEBOT3_MODEL=waffle_pi
     roslaunch turtlebot3_gazebo turtlebot3_world.launch
@@ -40,7 +43,9 @@ Ainda em outro terminal:
 
 Em mais outro terminal:
 
+
     roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
 
 Dica: use seu poder de dedução e descubra como evitar ficar digitando 	`export TURTLEBOT3_MODEL=waffle_pi`  toda hora.
 
