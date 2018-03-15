@@ -45,6 +45,7 @@ Num terminal, faça o seguinte:
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
     git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+    git clone https://github.com/ROBOTIS-GIT/turtlebot3_gazebo_plugin
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_applications.git   
     git clone https://github.com/mirwox/robot17   
     cd ..
