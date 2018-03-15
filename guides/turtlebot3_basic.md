@@ -12,7 +12,14 @@ Primeiro precisamos definir qual Turtlebot usar na simulação. A versão *Waffl
 
 Depois iniciamos o ambiente virtual de simulação:
 
-    roslaunch turtlebot3_gazebo_ros turtlebot3_world.launch
+roslaunch turtlebot3_gazebo turtlebot3_house.launch
+
+
+
+
+Ou você pode também testar num ambiente  de uma arena de robôs:
+
+    roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
 
 Agora um terminal que nos permita controlar o robô com as teclas:
@@ -21,4 +28,6 @@ Agora um terminal que nos permita controlar o robô com as teclas:
 
 Finalmente o RVIZ - painel de instrumentação:
 
-    rosrun rviz rviz -d `rospack find turtlebot3_description`/rviz/model.rviz
+
+roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch 
+
