@@ -14,6 +14,8 @@ Devido a [uma alteração](https://github.com/ROBOTIS-GIT/turtlebot3_gazebo_plug
 	git pull
 	cd ../turtlebot3_simulations
 	git pull
+	cd ../robot18
+	git pull
 	cd ~/catkin_ws
 	catkin_make
 
@@ -31,6 +33,7 @@ Em outro terminal:
     roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
 Ainda em outro terminal:
+
 
 	export TURTLEBOT3_MODEL=waffle_pi
 	roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch 
