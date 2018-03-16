@@ -11,7 +11,7 @@ Primeiro precisamos definir qual Turtlebot usar na simulação. A versão *Waffl
 
 Depois iniciamos o ambiente virtual de simulação:
 
-    roslaunch turtlebot3_gazebo_ros turtlebot3_world.launch
+    roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
 Depois o serviço de SLAM
 
