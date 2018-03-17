@@ -71,7 +71,7 @@ Num outro terminal, faça:
 Num terceiro terminal, faça:
 
     export TURTLEBOT3_MODEL=waffle_pi
-    roslaunch turtlebot3_gazebo_ros turtlebot3_gazebo_rviz.launch
+    roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
 
 
 
