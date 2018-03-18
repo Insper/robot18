@@ -1,10 +1,14 @@
 # Robótica Computacional - Projeto 1 em grupo
 
+Última modificação: {{ file.mtime }}
+
 ## Resumo
 
 Seu grupo deve programar um robô em ROS para que reaja de forma diferente a dois objetos, seguindo um deles e usando IMU e LiDAR para se autopreservar.
 
 Veja os [projetos do ano passado](https://www.youtube.com/watch?v=8bBUx-2XtOE&list=PLh9Ibk8NqrdGskoV0E3OmpLzBuHk92l0c) para ter uma idéia.
+
+<font color=red>Sempre que possível leia este enunciado e as rubricas online. </red> Estes documentos são atualizados constantemente.
 
 ## Objetivos
 
@@ -96,6 +100,7 @@ Lembre-se que agora [dois plágios significam expulsão do curso](http://portald
 
 ## Links úteis
 
+*ROS**
 Exemplos básicos de ROS no Github da Disciplina
 [https://github.com/Insper/robot18/tree/master/ros/exemplos_python/scripts](https://github.com/Insper/robot18/tree/master/ros/exemplos_python/scripts)
 
@@ -108,6 +113,7 @@ Exemplo de ROS com OpenCV
 Exemplos de Publishers e Subscribers da ROS Wiki
 [http://wiki.ros.org/rospy/Overview/Publishers%20and%20Subscribers](http://wiki.ros.org/rospy/Overview/Publishers%20and%20Subscribers)
 
+**Máquinas de estados**
 Smach - Máquinas de Estados
 [http://wiki.ros.org/smach/Tutorials](http://wiki.ros.org/smach/Tutorials)
 
@@ -115,36 +121,44 @@ Visual States - outra alternativa para fazer máquina de estados
 [http://jderobot.org/VisualStates](http://jderobot.org/VisualStates)
 
 
+**OpenCV**
 Cam shift com OpenCV
 [http://www.pirobot.org/blog/0016/](http://www.pirobot.org/blog/0016/)
-
-
-Turtlebot3 Slam
-[https://www.youtube.com/watch?v=hX6pFcfr29c](https://www.youtube.com/watch?v=hX6pFcfr29c)
 
 Fluxo óptico
 [https://docs.opencv.org/3.3.1/d7/d8b/tutorial_py_lucas_kanade.html](https://docs.opencv.org/3.3.1/d7/d8b/tutorial_py_lucas_kanade.html)
 
+
+**SLAM**
+Turtlebot3 Slam
+[https://www.youtube.com/watch?v=hX6pFcfr29c](https://www.youtube.com/watch?v=hX6pFcfr29c)
+
 SLAM
 [https://www.youtube.com/watch?v=7mEKrT_cKWI](https://www.youtube.com/watch?v=7mEKrT_cKWI )
 
-Alvar
-Exemplo de Alvar feito por Rachel Moraes (pioneira computação):
+SLAM com marcadores Aruco
+[http://wiki.ros.org/fiducials]
+
+
+**Alvar**
+
+Marcadores de realidade aumentada (Alvar)
+[http://wiki.ros.org/ar_track_alvar](http://wiki.ros.org/ar_track_alvar)
+
+São outros marcadores fiduciaise e podem servir para você implementar seu próprio sistema de localização, vejam o exemplo de Alvar feito por Rachel Moraes (pioneira computação):
 [https://github.com/mirwox/robot17/blob/master/exemplos_projeto1/scripts/marcador.py](https://github.com/mirwox/robot17/blob/master/exemplos_projeto1/scripts/marcador.py )
 
 Documentação do Alvar / ROS
 [http://wiki.ros.org/ar_track_alvar](http://wiki.ros.org/ar_track_alvar)
 
 
-IMU - Innertial Measurement Unit
+**IMU - Innertial Measurement Unit**
 Subscriber simples para IMU (em C++)
 [http://wiki.ros.org/evarobot_minimu9/Tutorials/indigo/Writing%20a%20Simple%20Subscriber%20for%20IMU](http://wiki.ros.org/evarobot_minimu9/Tutorials/indigo/Writing%20a%20Simple%20Subscriber%20for%20IMU)
 
-YOLO
+**YOLO**
 Demo do YOLO (Vimos em aula)
 [https://www.youtube.com/watch?v=VOC3huqHrss](https://www.youtube.com/watch?v=VOC3huqHrss)
 Módulo do YOLO para ROS
 [https://github.com/pgigioli/darknet_ros](https://github.com/pgigioli/darknet_ros)
 
-Marcadores de realidade aumentada (Alvar)
-[http://wiki.ros.org/ar_track_alvar](http://wiki.ros.org/ar_track_alvar)
