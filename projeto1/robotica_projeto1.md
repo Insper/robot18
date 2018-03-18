@@ -1,13 +1,12 @@
 # Robótica Computacional - Projeto 1 em grupo
 
-Última modificação: {{ file.mtime }}
 
 ## Resumo
 
 Seu grupo deve programar um robô em ROS para que reaja de forma diferente a dois objetos, seguindo um deles e usando IMU e LiDAR para se autopreservar.
 
 Veja os [projetos do ano passado](https://www.youtube.com/watch?v=8bBUx-2XtOE&list=PLh9Ibk8NqrdGskoV0E3OmpLzBuHk92l0c) para ter uma idéia.
-
+    
 <font color=red>Sempre que possível leia este enunciado e as rubricas online. </red> Estes documentos são atualizados constantemente.
 
 ## Objetivos
