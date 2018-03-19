@@ -127,7 +127,7 @@ Conecte-se ao ssh
 
 Digite:
 
-	shutdown -P now
+	sudo shutdown -P now
 
 Assim que as luzes da Raspberry passarem a piscar desligue a energia no cabo
 
