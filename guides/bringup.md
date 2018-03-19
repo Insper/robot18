@@ -58,10 +58,6 @@ Digite na linha de comando:
 
 ## De volta no PC
 
-Crie a variável de ambiente do PC
-
-	export ROS_IP=`hostname -I`
-
 
 Certifique-se de que todo o software do Turtlebot e do curso está atualizado:
 
@@ -80,9 +76,23 @@ Certifique-se de que todo o software do Turtlebot e do curso está atualizado:
 	catkin_make
 
 
-Crie a variável de ambiente para conectar-se à Raspberry Pi:
+### Em cada terminal
+
+Crie a variável de ambiente para conectar-se à Raspberry Pi, substituindo IPBerry pelo IP do seu robô:
 
 	export ROS_MASTER_URI=http://IPBerry:11311
+
+Crie a variável de ambiente do PC
+
+	export ROS_IP=`hostname -I`
+
+Indique o tipo de robô que está usando
+
+	export TURTLEBOT3_MODEL=burger
+
+Nota: você pode colocar as três linhas acima no arquivo `~/.bashrc` para evitar ter que digitar em todo terminal
+
+
 
 Agora execute:
 
