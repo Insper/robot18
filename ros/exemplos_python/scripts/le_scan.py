@@ -30,7 +30,7 @@ if __name__=="__main__":
 
 	while not rospy.is_shutdown():
 		print("Oeee")
-		velocidade = Twist(Vector3(0, 0, 0), Vector3(30, 0, 0))
+		velocidade = Twist(Vector3(0, 0, 0), Vector3(0, 0, 1))
 		velocidade_saida.publish(velocidade)
 		rospy.sleep(2)
 
