@@ -3,12 +3,18 @@
 
 import rospy
 
+import numpy as np
+
 from geometry_msgs.msg import Twist, Vector3
 from sensor_msgs.msg import LaserScan
 
 
 def scaneou(dado):
-	print(min(dado.ranges))
+	print("Faixa valida: ", dado.range_min , " - ", dado.range_max )
+	print("Leituras:")
+	print(np.array(dado.ranges).round(decimals=2))
+	#print("Intensities")
+	#print(np.array(dado.intensities).round(decimals=2))
 
 	
 
@@ -24,7 +30,7 @@ if __name__=="__main__":
 
 	while not rospy.is_shutdown():
 		print("Oeee")
-		velocidade = Twist(Vector3(10, 0, 0), Vector3(0, 0, 0))
+		velocidade = Twist(Vector3(0, 0, 0), Vector3(0, 0, 1))
 		velocidade_saida.publish(velocidade)
 		rospy.sleep(2)
 
