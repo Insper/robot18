@@ -71,21 +71,6 @@ def roda_todo_frame(imagem):
 
 
 ## Classes - estados
-# define state Foo
-class Longe(smach.State):
-    def __init__(self):
-        smach.State.__init__(self, outcomes=['ainda_longe','perto'])
-
-    def execute(self, userdata):
-        global velocidade_saida
-        rospy.loginfo('Executing state LONGE')
-        if area < area_ideal - tolerancia_area:
-
-            return 'ainda_longe'
-        else:
-            vel = Twist(Vector3(0, 0, 0), Vector3(0, 0, 0))
-            velocidade_saida.publish(vel)
-            return 'perto'
 
 
 class Girando(smach.State):
