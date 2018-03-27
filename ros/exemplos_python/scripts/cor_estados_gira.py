@@ -32,7 +32,7 @@ area = 0.0
 
 tolerancia_x = 50
 tolerancia_y = 20
-ang_speed = 0.15
+ang_speed = 0.4
 area_ideal = 60000 # área da distancia ideal do contorno - note que varia com a resolução da câmera
 tolerancia_area = 20000
 
@@ -92,6 +92,8 @@ class Girando(smach.State):
 			velocidade_saida.publish(vel)
 			return 'girando'
 		else:
+			vel = Twist(Vector3(0, 0, 0), Vector3(0, 0, 0))
+			velocidade_saida.publish(vel)
 			return 'alinhou'
 
 
@@ -120,7 +122,8 @@ def main():
 	rospy.init_node('cor_estados')
 
 	# Para usar a webcam 
-	recebedor = rospy.Subscriber("/cv_camera/image_raw/compressed", CompressedImage, roda_todo_frame, queue_size=1, buff_size = 2**24)
+	#recebedor = rospy.Subscriber("/cv_camera/image_raw/compressed", CompressedImage, roda_todo_frame, queue_size=1, buff_size = 2**24)
+	recebedor = rospy.Subscriber("/raspicam_node/image/compressed", CompressedImage, roda_todo_frame, queue_size=10, buff_size = 2**24)
 
 	velocidade_saida = rospy.Publisher("/cmd_vel", Twist, queue_size = 1)
 
