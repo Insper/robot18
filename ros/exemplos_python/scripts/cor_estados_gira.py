@@ -88,19 +88,6 @@ class Longe(smach.State):
             return 'perto'
 
 
-# define state Bar
-class Andando(smach.State):
-    def __init__(self):
-        smach.State.__init__(self, outcomes=['ainda_longe'])
-
-    def execute(self, userdata):
-        global velocidade_saida
-        rospy.loginfo('Executing state ANDANDO')
-        #comando para andar
-        vel = Twist(Vector3(0.5, 0, 0), Vector3(0, 0, 0))
-        velocidade_saida.publish(vel)
-        return 'ainda_longe'
-
 class Girando(smach.State):
     def __init__(self):
         smach.State.__init__(self, outcomes=['alinhou', 'girando'])
