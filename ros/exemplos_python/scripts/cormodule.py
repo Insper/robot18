@@ -1,3 +1,6 @@
+#! /usr/bin/env python
+# -*- coding:utf-8 -*-
+
 
 import rospy
 import numpy as np
@@ -61,10 +64,15 @@ def identifica_cor(frame):
 	else:
 	    media = (0, 0)
 
+	# Representa a area e o centro do maior contorno no frame
+	font = cv2.FONT_HERSHEY_COMPLEX_SMALL
+	cv2.putText(frame,"{:d} {:d}".format(*media),(20,100), 1, 4,(255,255,255),2,cv2.LINE_AA)
+	cv2.putText(frame,"{:0.1f}".format(maior_contorno_area),(20,50), 1, 4,(255,255,255),2,cv2.LINE_AA)
+
 	cv2.imshow('video', frame)
 	cv2.imshow('seg', segmentado_cor)
 	cv2.waitKey(1)
 
 	centro = (frame.shape[0]//2, frame.shape[1]//2)
 
-	return media, centro, maior_contorno
+	return media, centro, maior_contorno_area
