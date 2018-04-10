@@ -25,7 +25,7 @@ def draw_circle(img, center):
 def make_str(code, color):
     s = []
     for cd, cl in zip(list(code), color):
-        s.append(f'{cd}: {cl}')
+        s.append('{}: {}'.format(cd, cl))
     return ', '.join(s)
 
 
@@ -39,7 +39,7 @@ def print_colors(color_bgr):
     print(sep)
     print(make_str('BGR', color_bgr))
     print(make_str('HSV', cvtColor(color_bgr, cv2.COLOR_BGR2HSV)))
-    print(f'GRAY: {cvtColor(color_bgr, cv2.COLOR_BGR2GRAY)[0]}')
+    print('GRAY: {}'.format(cvtColor(color_bgr, cv2.COLOR_BGR2GRAY)[0]))
     print(sep)
 
 
