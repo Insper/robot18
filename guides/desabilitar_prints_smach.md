@@ -20,22 +20,22 @@ Ou no `sublime`:
 
 Localize as seguintes linhas (no screen `Ctrl` `C` mostra a linha atual):
 
-42	# Setup smach-ros interface
-43	smach.set_loggers(
-44	        rospy.loginfo,
-45	        rospy.logwarn,
-46	        rospy.logdebug,
-47	        rospy.logerr)
+	42	# Setup smach-ros interface
+	43	smach.set_loggers(
+	44	        rospy.loginfo,
+	45	        rospy.logwarn,
+	46	        rospy.logdebug,
+	47	        rospy.logerr)
 
 
 Altere na linha 44 de `rospy.loginfo` para `rospy.logdebug`, ficando portanto:
 
-42	# Setup smach-ros interface
-43	smach.set_loggers(
-44	        rospy.logdebug,
-45	        rospy.logwarn,
-46	        rospy.logdebug,
-47	        rospy.logerr)
+	42	# Setup smach-ros interface
+	43	smach.set_loggers(
+	44	        rospy.logdebug,
+	45	        rospy.logwarn,
+	46	        rospy.logdebug,
+	47	        rospy.logerr)
 
 Dê `Ctrl` `X`, em seguida escolha a opção de salvar.
 
