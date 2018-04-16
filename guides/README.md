@@ -24,6 +24,6 @@ programas no robô
 3. [Bringup do Turtlebot3 versão Musiquinha](bringup_musica.md) - preparando o sistema para rodar os
 programas no robô
 4. [Testar visão sem robô](debugar_sem_robo_opencv.md)
-5. [Desabilitar as impressões do SMACH no terminal](desabilitar_prints_smach.py)
+5. [Desabilitar as impressões do SMACH no terminal](desabilitar_prints_smach.md)
 
 
