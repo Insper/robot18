@@ -16,26 +16,27 @@ from numpy.random import random_sample
 
 
 class Particle(object):
-    """ Represents a hypothesis (particle) of the robot's pose consisting of x,y and theta
-        Attributes:
-            x: the x-coordinate of the hypothesis relative to the map frame
-            y: the y-coordinate of the hypothesis relative ot the map frame
-            theta: the yaw of the hypothesis relative to the map frame
-            w: the particle weight (the class does not ensure that particle weights are normalized
+    """ Representa uma hipótese sobre a posição do robô consistindo de x,y and theta
+        Atributos:
+            x: coordenada x no sistema de coordenadas do mapa
+            y: coordenada y no sistema de coordenadas do mapa
+            theta: ângulo do robô em relação ao sistema de coordenadas do mapa
+            w: P(H_i) para a partícula
     """ 
 
     def __init__(self,x=0.0,y=0.0,theta=0.0,w=1.0):
-        """ Construct a new Particle
-            x: the x-coordinate of the hypothesis relative to the map frame
-            y: the y-coordinate of the hypothesis relative ot the map frame
-            theta: the yaw of the hypothesis relative to the map frame
-            w: the particle weight (the class does not ensure that particle weights are normalized """
+        """ Constrói uma nova partícula
+            x: coordenada x no sistema de coordenadas do mapa
+            y: coordenada y no sistema de coordenadas do mapa
+            theta: ângulo do robô em relação ao sistema de coordenadas do mapa
+            w: P(H_i) para a partícula. A normalização (fazer somar 1) não é feita
+            automaticamente
+            """
         self.w = w
         self.theta = theta
         self.x = x
         self.y = y
 
-    # TODO: define additional helper functions if needed
     def normalize(self, Z):
         """ Ajusta o peso da particula usando o fator de normalizacao (Z)
             Útil quando vamos fazer a probabilidade de todas as partículas somar 1
