@@ -75,6 +75,10 @@ def reamostrar(particulas, n_particulas = num_particulas):
         de acordo com a probabilidade e deslocadas de acordo com uma variação normal    
         
         O notebook como_sortear tem dicas que podem ser úteis
+        
+        Depois de reamostradas todas as partículas precisam novamente ser deixadas com probabilidade igual
+        
+        Use 1/n ou 1, não importa desde que seja a mesma
     """
     return particulas
 
