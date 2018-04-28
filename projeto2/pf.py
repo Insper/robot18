@@ -88,6 +88,8 @@ class Particle(object):
                         
     def __setitem__(self, index, value):
         """
+            Permite a sintaxe p[numero] = valor para cada particula, 
+            em que 0,1,2,3 são x,y,theta e w, respectivamente
         """
         if index == 0:
             self.x = value
@@ -100,6 +102,7 @@ class Particle(object):
             
     def move(self, movimento):
         """
+            Desloca a particula recebendo um array de movimento x, y, theta
         """
         self.x += movimento[0]
         self.y += movimento[1]
