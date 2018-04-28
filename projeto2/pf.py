@@ -132,10 +132,14 @@ def create_particles(pose, var_x = 50, var_y = 50, var_theta = math.pi/3, num=10
 
 
 def draw_random_sample(choices, probabilities, n):
-    """ Return a random sample of n elements from the set choices with the specified probabilities
-        choices: the values to sample from represented as a list
-        probabilities: the probability of selecting each element in choices represented as a list
-        n: the number of samples
+    """ 
+        Devolve uma amostra aleatória de n elementos retirada do conjunto choices em que cada 
+        elemento tem uma probabilidade diferente de ser escolhido. As probabilidades
+        estão na lista probabilities
+        
+        choices: lista de valores a amostrar
+        probabilities: lista das probabilidades de cada valor
+        n: número de amostras desejadas na lista resultado
     """
     values = np.array(range(len(choices)))
     probs = np.array(probabilities)
