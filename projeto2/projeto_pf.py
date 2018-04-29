@@ -6,7 +6,9 @@ Esta classe deve conter todas as suas implementações relevantes para seu filtr
 
 from pf import Particle, create_particles
 import numpy as np
+import inspercles # necessário para o a função nb_lidar que simula o laser
 import math
+
 
 largura = 775 # largura do mapa
 altura = 748  # altura do mapa
