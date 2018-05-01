@@ -54,7 +54,7 @@ class Particle(object):
         """
             Retorna uma lista com x,y, theta, w da particula
         """
-        l = self.pose(self)
+        l = self.pose()
         l.append(self.w)
         return l
     

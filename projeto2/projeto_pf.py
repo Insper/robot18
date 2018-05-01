@@ -33,14 +33,12 @@ movimentos_longos = [[-10, -10, 0], [-10, 10, 0], [-10,0,0], [-10, 0, 0],
               [0,10,0], [0,10,0], [0,10,0],[0,10,0],
               [0,0,-math.radians(90)],
               [math.cos(math.pi/3)*10, math.sin(math.pi/3),0],[math.cos(math.pi/3)*10, math.sin(math.pi/3),0],[math.cos(math.pi/3)*10, math.sin(math.pi/3),0],
-              [math.cos(math.pi/3)*10, math.sin(math.pi/3),0]
-              
-              ]
+              [math.cos(math.pi/3)*10, math.sin(math.pi/3),0]]
 
 # Lista curta
 movimentos_curtos = [[-10, -10, 0], [-10, 10, 0], [-10,0,0], [-10, 0, 0]]
 
-movimentos = movimentos_curtos
+movimentos = movimentos_longos
 
 
 
