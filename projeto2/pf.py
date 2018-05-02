@@ -108,6 +108,32 @@ class Particle(object):
         self.x += movimento[0]
         self.y += movimento[1]
         self.theta += movimento[2]
+        
+    def move_linear(self, desl):
+        """
+            Realiza um deslocamento relativo de magnitude desl no sentido
+            Em que o robô está olhando
+        """
+        self.x = self.x + math.cos(self.theta)*desl
+        self.y = self.y + math.sin(self.theta)*desl
+        
+    def move_relative(self, speed):
+        """
+            speed[0] is a linear speed
+            speed[1] is an angular speed
+        """
+        self.move_linear(speed[0])
+        self.move_angular(speed[1])
+        
+
+        
+        
+    
+    def move_angular(self, ang):
+        """
+            Realiza um deslocamento angular de magnitude ang
+        """
+        self.theta+=ang
 
 
     
