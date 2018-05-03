@@ -38,7 +38,23 @@ movimentos_longos = [[-10, -10, 0], [-10, 10, 0], [-10,0,0], [-10, 0, 0],
 # Lista curta
 movimentos_curtos = [[-10, -10, 0], [-10, 10, 0], [-10,0,0], [-10, 0, 0]]
 
-movimentos = movimentos_longos
+movimentos_relativos = [[0, -math.pi/3],[10, 0],[10, 0], [10, 0], [10, 0],[15, 0],[15, 0],[15, 0],[0, -math.pi/2],[10, 0],
+                       [10,0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0],
+                       [10,0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0],
+                       [10,0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0],
+                       [0, -math.pi/2], 
+                       [10,0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0],
+                       [10,0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0],
+                       [10,0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0],
+                       [10,0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0],
+                       [0, -math.pi/2], 
+                       [10,0], [0, -math.pi/4], [10,0], [10,0], [10,0],
+                       [10,0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0],
+                       [10,0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0]]
+
+
+
+movimentos = movimentos_relativos
 
 
 
@@ -50,9 +66,11 @@ def cria_particulas(minx=0, miny=0, maxx=largura, maxy=altura, n_particulas=num_
     
 def move_particulas(particulas, movimento):
     """
-        Recebe um movimento na forma [x,y, theta]  e o aplica a todas as partículas
+        Recebe um movimento na forma [deslocamento, theta]  e o aplica a todas as partículas
         Assumindo um desvio padrão para cada um dos valores
         Esta função não precisa devolver nada, e sim alterar as partículas recebidas.
+        
+        Sugestão: aplicar move_relative(movimento) a cada partícula
         
         Você não precisa mover o robô. O código fornecido pelos professores fará isso
         
