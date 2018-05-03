@@ -169,6 +169,9 @@ skip = 30
 if __name__ == '__main__':
     from random import random
 
+
+    print("Se \n \tpython window.py \n não funcionar, tente: \n \tpythonw window.py \n especialmente no Python 3")
+
     def on_update(robot, particles, robot_speed):
         global count
         count += 1
