@@ -1,4 +1,4 @@
-cd# Projeto final
+# Projeto final
 
 Atenção: este <font color=red>**não**</font> é o enunciado do projeto final. São só insumos para *brainstorm* dos grupos
 
