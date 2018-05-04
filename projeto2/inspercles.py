@@ -562,14 +562,17 @@ def nb_lidar_old(particle, angles):
     return leituras
 
 def nb_lidar(particle, angles, lines = lines):
-    directions = make_directions(particle, angles)
-    origin = (particle.x, particle.y)
-    interpoints = closest_intersections(origin, directions, lines)
-    dists = []
-    for p in interpoints:
-      dist = math.sqrt((p[0]-origin[0])**2 + (p[1] - origin[1])**2)
-      dists.append(dist)
-    readings= dict(zip(angles, dists))
+    try:
+        directions = make_directions(particle, angles)
+        origin = (particle.x, particle.y)
+        interpoints = closest_intersections(origin, directions, lines)
+        dists = []
+        for p in interpoints:
+          dist = math.sqrt((p[0]-origin[0])**2 + (p[1] - origin[1])**2)
+          dists.append(dist)
+        readings= dict(zip(angles, dists))
+    except TypeError:
+        readings = dict(zip(angles, [0]*len(angles)))
     return readings
 
 
