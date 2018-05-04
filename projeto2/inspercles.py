@@ -573,6 +573,8 @@ def nb_lidar(particle, angles, lines = lines):
         readings= dict(zip(angles, dists))
     except TypeError:
         readings = dict(zip(angles, [0]*len(angles)))
+    except ValueError:
+        readings = dict(zip(angles, [0]*len(angles)))
     return readings
 
 
