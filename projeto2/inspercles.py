@@ -346,7 +346,7 @@ def nb_create_particles(pose, var_x = 50, var_y = 50, var_theta = math.pi/3, num
     s = pose
     for i in range(num):
         x = random.uniform(s[0] - var_x, s[0] + var_x)
-        y = random.uniform(s[1] - var_x, s[1] + var_y)
+        y = random.uniform(s[1] - var_y, s[1] + var_y)
         theta = random.uniform(s[2] - var_theta, s[2] + var_theta)
         p = Particle(x, y, theta, w=1.0) # A prob. w vai ser normalizada depois
         particle_cloud.append(p)
