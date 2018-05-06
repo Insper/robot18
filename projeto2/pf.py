@@ -13,6 +13,7 @@ import math
 import time
 import numpy as np
 from numpy.random import random_sample
+import sys
 
 
 class Particle(object):
@@ -165,6 +166,19 @@ def draw_random_sample(choices, probabilities, n):
         probabilities: lista das probabilidades de cada valor
         n: número de amostras desejadas na lista resultado
     """
+    if np.any(np.isnan(probabilities)):
+        message = """\n\nIMPOSSÍVEL calcular com valor de probabilidade NaN - Not a number presentes na lista \n
+        DICA: se estiver obtendo probabilidades muito pequenas \n 
+        Cheque se suas contas estão certas, lembre-se de que a produtória \n
+        da fórmula se aplica apenas aos lasers de cada partícula \n
+        Caso precise mesmo representar valores menores que  {0} \n
+        Use mpmath.mpf para armazenar os valores temporários do cálculo de probabilidade e de alpha \n
+        e volte a armazenar no atributo w da particula após a multiplicação por alpha \n
+        referênia: https://docs.sympy.org/0.6.7/modules/mpmath/basics.html"""
+        message = message.format(sys.float_info.min)
+        print(message)
+        print("Suas probabilidades:")
+        print(probabilities)
     values = np.array(range(len(choices)))
     probs = np.array(probabilities)
     bins = np.add.accumulate(probs)
@@ -173,5 +187,6 @@ def draw_random_sample(choices, probabilities, n):
     for i in inds:
         samples.append(deepcopy(choices[int(i)]))
     return samples
+
 
 
