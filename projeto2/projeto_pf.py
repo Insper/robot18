@@ -83,7 +83,7 @@ def leituras_laser_evidencias(robot, particulas):
         Depois incorpora a evidência calculando
         P(H|D) para todas as particulas
         Lembre-se de que a formula $P(z_t | x_t) = \alpha \prod_{j}^M{e^{\frac{-(z_j - \hat{z_j})}{2\sigma^2}}}$ 
-        responde somente P(Hi|D), em que H é a hi
+        responde somente P(D|Hi), em que H é a hi
         
         Esta função não precisa retornar nada, mas as partículas precisa ter o seu w recalculado. 
         
