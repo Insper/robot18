@@ -20,13 +20,13 @@ def nonzero(list_):
         if a!=0:
             return True
     return False
-    
+
 
 class Window:
     """
         Main window of the application
     """
-    def __init__(self, on_update=None, background_file=None, robot=None, particles=None):
+    def __init__(self, on_update=None, background_file=None, robot=None):
         '''
         Args:
             background_file(str): Background filename
@@ -38,14 +38,8 @@ class Window:
         # Initialize view
         pygame.init()
         if background_file is None:
-            background_file = BACKGROUND_FILE_PNG
-        try:
-            self.background = pygame.image.load(background_file)
-        except pygame.error:
             background_file = BACKGROUND_FILE
-            self.background = pygame.image.load(background_file)
-
-            
+        self.background = pygame.image.load(background_file)
         self.size = self.background.get_size()
         self.screen = pygame.display.set_mode(self.size)
 
@@ -54,10 +48,8 @@ class Window:
         self.robot = robot
         if self.robot is None:
             self.robot = Particle(self.size[0]/2, self.size[1]/2)
-        particles = projeto_pf.cria_particulas()
-        if particles:
-            self.particles = particles
-            
+        projeto_pf.particulas = projeto_pf.cria_particulas()
+
         self.leituras_robot = inspercles.nb_lidar(self.robot, projeto_pf.angles)
 
 
@@ -66,26 +58,26 @@ class Window:
 
     def run(self):
         '''
-        Game loop.
+        Game loop. 
         '''
         while True:
             self.on_events(pygame.event.get())
             if nonzero(self.robot_speed):
                 self.robot.move_relative(self.robot_speed)
                 self.leituras_robot = inspercles.nb_lidar(self.robot, projeto_pf.angles)
-                
+
                 # move particles
-                projeto_pf.move_particulas(self.particles, self.robot_speed)
+                projeto_pf.move_particulas(projeto_pf.particulas, self.robot_speed)
                 # draw lasers
-                
+
                   # Atualiza probabilidade e posicoes
                 projeto_pf.leituras_laser_evidencias(projeto_pf.robot, projeto_pf.particulas)
-                
+
                 # Reamostra as particulas
                 projeto_pf.particulas = projeto_pf.reamostrar(projeto_pf.particulas)
-          
+
             if self.on_update is not None:
-                self.on_update(self.robot, self.particles, self.robot_speed)
+                self.on_update(self.robot, projeto_pf.particulas, self.robot_speed)
 
             self.draw()
 
@@ -121,18 +113,18 @@ class Window:
         # Draw maze - debugging reasons
         # Descomente para ver um efeito psicodélico
         #game_utils.draw_maze(self.ofb)
-        
+
 
         # Draw particles
-        for particle in self.particles:
+        for particle in projeto_pf.particulas:
             self.draw_particle(particle)
-        
+
         if self.leituras_robot:
             game_utils.draw_laser_readings(self.ofb, self.robot, self.leituras_robot)
 
         self.draw_robot()
 
-        
+
 
         self.ofb.convert()         # Is this really necessary?
 
@@ -183,16 +175,5 @@ if __name__ == '__main__':
         count += 1
         if not count%skip:
             print(robot.x, robot.y, robot.theta)
-            
-    win = Window(on_update=on_update)
 
-    w, h = win.size
-    def random_particle():
-        x = random() * w
-        y = random() * h
-        theta = random() * 2 * math.pi
-        return Particle(x, y, theta)
-
-    win.particles = [random_particle() for _ in range(50)]
-
-    win.run()
+    Window(on_update=on_update).run()
